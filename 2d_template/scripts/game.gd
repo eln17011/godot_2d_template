@@ -3,9 +3,7 @@ extends Node2D
 # Load the Player scene
 var PlayerScene: PackedScene = preload("res://scenes/player.tscn")
 
-@onready var grunk_timer: Timer = $GrunkTimer
-@onready var hud: HUD = $HUD
-@onready var stone_timer : Timer = $StoneTimer
+@onready var hud = $HUD
 
 const spawn_point = Vector2(1000, 500)
 

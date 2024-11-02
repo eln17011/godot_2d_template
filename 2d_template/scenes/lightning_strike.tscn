@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://blgtkl7wgb4pu"]
 
-[ext_resource type="Script" path="res://Scenes/lightning_strike.gd" id="1_e7lbh"]
-[ext_resource type="AudioStream" uid="uid://bcwcwkuskomn3" path="res://Assets/Audio/Blixt/Blixt.mp3" id="2_gh3h1"]
-[ext_resource type="AudioStream" uid="uid://vg5tce1hx6lc" path="res://Assets/Audio/Blixt/Blixt2.mp3" id="3_vwtyq"]
-[ext_resource type="AudioStream" uid="uid://41ilrbktsaw4" path="res://Assets/Audio/Blixt/Blixt3.mp3" id="4_i4y1d"]
+[ext_resource type="Script" path="res://scripts/lightning_strike.gd" id="1_e7lbh"]
+[ext_resource type="AudioStream" uid="uid://bcwcwkuskomn3" path="res://assets/audio/Blixt/Blixt.mp3" id="2_gh3h1"]
+[ext_resource type="AudioStream" uid="uid://vg5tce1hx6lc" path="res://assets/audio/Blixt/Blixt2.mp3" id="3_vwtyq"]
+[ext_resource type="AudioStream" uid="uid://41ilrbktsaw4" path="res://assets/audio/Blixt/Blixt3.mp3" id="4_i4y1d"]
 
 [sub_resource type="Animation" id="Animation_q6i1t"]
 length = 0.001

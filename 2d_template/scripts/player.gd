@@ -30,9 +30,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _ready() -> void:
-	if(controller_id % 2 == 1):
-		var texture = load("res://Assets/Cap2.png")
-		sprite.texture = texture
+	pass
 
 func set_controller_id(id) -> void:
 	controller_id = id

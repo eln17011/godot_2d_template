@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var main_menu_scene: PackedScene = load("res://UI/main_menu.tscn")
+@onready var main_menu_scene: PackedScene = load("res://ui/main_menu.tscn")
 @onready var musicPlayer_node = $Music_AudioStreamPlayer
 
 func _input(event: InputEvent) -> void:
@@ -16,7 +16,6 @@ func _on_mute_music_texture_button_2_pressed() -> void:
 		musicPlayer_node.stop()
 	else:
 		musicPlayer_node.play()
-	pass # Replace with function body.
 
 
 func _on_main_menu_texture_button_3_pressed() -> void:
@@ -35,4 +34,3 @@ func pause_and_unpause():
 
 func _on_resume_texture_button_pressed() -> void:
 	pause_and_unpause()
-	pass # Replace with function body.

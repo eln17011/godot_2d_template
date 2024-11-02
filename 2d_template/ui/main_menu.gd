@@ -5,8 +5,8 @@ extends CanvasLayer
 @onready var QuitButton_Node = %Quit_TextureButton3
 @onready var TitleScreenAudioStream_Node = %TitleScreen_AudioStreamPlayer
 
-@onready var game_scene = preload("res://Scenes/game.tscn")
-@onready var inGameMenu_scene = load("res://UI/Ingame_menu.tscn")
+@onready var game_scene = preload("res://scenes/game.tscn")
+@onready var inGameMenu_scene = load("res://ui/Ingame_menu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 

@@ -1,5 +1,5 @@
 extends CanvasLayer
-class_name HUD
+#class_name HUD
 
 @onready var lengthCounterLabel_node = %NumberCounterLentgh_Label
 @onready var timeCounterLabel_Node = %NumberCounterTime_Label
