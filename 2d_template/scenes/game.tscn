@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://rslh7wyupis3"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_ol0k5"]
+[ext_resource type="PackedScene" path="res://UI/hud.tscn" id="2_q2g3m"]
+[ext_resource type="PackedScene" uid="uid://c54u4diypovu6" path="res://scenes/rain.tscn" id="3_7gdvo"]
+
+[node name="Game" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_ol0k5")
+
+[node name="HUD" parent="." instance=ExtResource("2_q2g3m")]
+
+[node name="Rain" parent="HUD" instance=ExtResource("3_7gdvo")]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
+color = Color(0.94902, 0.701961, 0.364706, 1)
+energy = 0.16
+blend_mode = 1
+shadow_enabled = true
+max_distance = 1000.0
