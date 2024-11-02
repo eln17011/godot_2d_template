@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://blgtkl7wgb4pu"]
+
+[ext_resource type="Script" path="res://Scenes/lightning_strike.gd" id="1_e7lbh"]
+[ext_resource type="AudioStream" uid="uid://bcwcwkuskomn3" path="res://Assets/Audio/Blixt/Blixt.mp3" id="2_gh3h1"]
+[ext_resource type="AudioStream" uid="uid://vg5tce1hx6lc" path="res://Assets/Audio/Blixt/Blixt2.mp3" id="3_vwtyq"]
+[ext_resource type="AudioStream" uid="uid://41ilrbktsaw4" path="res://Assets/Audio/Blixt/Blixt3.mp3" id="4_i4y1d"]
+
+[sub_resource type="Animation" id="Animation_q6i1t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_tnqd6"]
+resource_name = "strike"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.3, 0.333333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 2.0, 1.0, 2.0, 1.55556, 1.48148, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_stn8e"]
+_data = {
+"RESET": SubResource("Animation_q6i1t"),
+"strike": SubResource("Animation_tnqd6")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_im76i"]
+streams_count = 3
+stream_0/stream = ExtResource("2_gh3h1")
+stream_1/stream = ExtResource("3_vwtyq")
+stream_2/stream = ExtResource("4_i4y1d")
+
+[node name="LightningStrike" type="DirectionalLight2D"]
+energy = 0.0
+script = ExtResource("1_e7lbh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_stn8e")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Blixt_AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_im76i")

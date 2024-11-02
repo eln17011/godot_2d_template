@@ -11,9 +11,9 @@ process_mode = 1
 script = ExtResource("1_ol0k5")
 
 [node name="HUD" parent="." instance=ExtResource("2_q2g3m")]
+visible = false
 
 [node name="Rain" parent="HUD" instance=ExtResource("3_7gdvo")]
-visible = false
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 visible = false

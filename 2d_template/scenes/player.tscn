@@ -1,54 +1,62 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkhs1oweifu3y"]
+[gd_scene load_steps=12 format=3 uid="uid://b8mpxfgf0cuj8"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_6bp4r"]
-[ext_resource type="Texture2D" uid="uid://c0xg5st4jh5tu" path="res://Assets/Cap1.png" id="2_o80hy"]
-[ext_resource type="Script" path="res://Scripts/label.gd" id="3_777ti"]
-[ext_resource type="PackedScene" path="res://Scenes/Hook.tscn" id="4_12b52"]
+[ext_resource type="Texture2D" uid="uid://bfs3y0yb74f7j" path="res://assets/art/player/run-1.png" id="2_rxvsp"]
+[ext_resource type="Texture2D" uid="uid://banjjfiiqq47p" path="res://assets/art/player/run-2.png" id="3_b5686"]
+[ext_resource type="Texture2D" uid="uid://da6lxv3tnome8" path="res://assets/art/player/run-3.png" id="4_wpn68"]
+[ext_resource type="Texture2D" uid="uid://ui87yq4wul4c" path="res://assets/art/player/run-4.png" id="5_0ote0"]
+[ext_resource type="Texture2D" uid="uid://c3d4wsp8brxxm" path="res://assets/art/player/run-5.png" id="6_vvm8i"]
+[ext_resource type="Texture2D" uid="uid://tkio03ewdfpj" path="res://assets/art/player/run-6.png" id="7_le07e"]
+[ext_resource type="Texture2D" uid="uid://741qb4wsscbm" path="res://assets/art/player/run-7.png" id="8_r16nx"]
+[ext_resource type="Texture2D" uid="uid://c6c5kem4eqs0k" path="res://assets/art/player/run-8.png" id="9_osy1o"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nyveq"]
-radius = 22.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_dn80l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rxvsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b5686")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wpn68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0ote0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vvm8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_le07e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r16nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_osy1o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nbwfu"]
-radius = 13.0384
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_52rs8"]
+radius = 18.0
+height = 54.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
 z_as_relative = false
 script = ExtResource("1_6bp4r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.092, 0.092)
-texture = ExtResource("2_o80hy")
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -34)
+sprite_frames = SubResource("SpriteFrames_dn80l")
+frame_progress = 0.657152
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_nyveq")
-
-[node name="RepairCheckArea" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="Mask checker" type="CollisionShape2D" parent="RepairCheckArea"]
-shape = SubResource("CircleShape2D_nbwfu")
-
-[node name="PlayerBoundUi" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="PlayerBoundUi"]
-visible = false
-layout_mode = 2
-offset_left = 17.0
-offset_top = -44.0
-offset_right = 147.0
-offset_bottom = -21.0
-text = "BUTTON_PROMT"
-script = ExtResource("3_777ti")
-
-[node name="Hook" parent="." instance=ExtResource("4_12b52")]
-visible = false
-distance = 400.0
-
-[connection signal="area_entered" from="RepairCheckArea" to="." method="_on_damage_tile_entered"]
-[connection signal="area_exited" from="RepairCheckArea" to="." method="_on_repair_check_area_area_exited"]
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, -27)
+shape = SubResource("CapsuleShape2D_52rs8")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5gqua0y0f8h8"
-path="res://.godot/imported/ScarpIcon.png-5ae2b823f4d52895a37c8361be730e8d.ctex"
+uid="uid://da6lxv3tnome8"
+path="res://.godot/imported/run-3.png-ee168a27ed779ec5ae09257bb237cc12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Images/ScarpIcon.png"
-dest_files=["res://.godot/imported/ScarpIcon.png-5ae2b823f4d52895a37c8361be730e8d.ctex"]
+source_file="res://assets/art/player/run-3.png"
+dest_files=["res://.godot/imported/run-3.png-ee168a27ed779ec5ae09257bb237cc12.ctex"]
 
 [params]
 

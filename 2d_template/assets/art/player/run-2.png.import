@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjek6ugp3hhhj"
-path="res://.godot/imported/ScrapCounterBackground.png-b706afb7ce169885a6bd1078405d5ce6.ctex"
+uid="uid://banjjfiiqq47p"
+path="res://.godot/imported/run-2.png-14083c5034e992944d6c723dbd720778.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Images/ScrapCounterBackground.png"
-dest_files=["res://.godot/imported/ScrapCounterBackground.png-b706afb7ce169885a6bd1078405d5ce6.ctex"]
+source_file="res://assets/art/player/run-2.png"
+dest_files=["res://.godot/imported/run-2.png-14083c5034e992944d6c723dbd720778.ctex"]
 
 [params]
 
