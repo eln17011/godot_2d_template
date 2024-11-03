@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var TitleScreenAudioStream_Node = %TitleScreen_AudioStreamPlayer
 
 @onready var game_scene = preload("res://scenes/game.tscn")
-@onready var inGameMenu_scene = load("res://ui/Ingame_menu.tscn")
+@onready var inGameMenu_scene = preload("res://ui/Ingame_menu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 
@@ -20,12 +20,10 @@ func _input(event):
 
 func _ready() -> void:
 	SinglePlayerButton_Node.scale = Vector2(.5,.5)
-	pass # Replace with function body.
 
 
 func _on_quit_texture_button_3_pressed() -> void:
 	get_tree().quit()
-	pass # Replace with function body.
 
 
 func _on_play_texture_button_pressed() -> void:
@@ -37,7 +35,6 @@ func _on_play_texture_button_pressed() -> void:
 	newInGameMenu_scene.set_meta("gameNode", newGameScene)
 	
 	self.queue_free()
-	pass # Replace with function body.
 
 
 func _on_mute_texture_button_2_pressed() -> void:
@@ -45,4 +42,3 @@ func _on_mute_texture_button_2_pressed() -> void:
 		TitleScreenAudioStream_Node.stop()
 	else:
 		TitleScreenAudioStream_Node.play()
-	pass # Replace with function body.

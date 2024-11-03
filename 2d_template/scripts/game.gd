@@ -5,7 +5,7 @@ var PlayerScene: PackedScene = preload("res://scenes/player.tscn")
 
 @onready var hud = $HUD
 
-const spawn_point = Vector2(1000, 500)
+const spawn_point = Vector2(500, 500)
 
 func _ready():
 	
@@ -21,3 +21,4 @@ func _ready():
 func create_player(i: int) -> void:
 	var player = PlayerScene.instantiate()
 	player.set_controller_id(i)
+	add_child(player)

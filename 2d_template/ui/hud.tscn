@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bn6hyjabd7tel"]
 
-[ext_resource type="Script" path="res://UI/hud.gd" id="1_umctx"]
-[ext_resource type="Texture2D" uid="uid://ddgjslgyojfua" path="res://UI/Images/CounterTimeAndLentgh.png" id="2_lplbw"]
-[ext_resource type="Texture2D" uid="uid://cjek6ugp3hhhj" path="res://UI/Images/ScrapCounterBackground.png" id="2_qn6do"]
-[ext_resource type="Texture2D" uid="uid://b5gqua0y0f8h8" path="res://UI/Images/ScarpIcon.png" id="3_7rv3m"]
+[ext_resource type="Script" path="res://ui/hud.gd" id="1_umctx"]
+[ext_resource type="Texture2D" uid="uid://ddgjslgyojfua" path="res://assets/art/CounterTimeAndLentgh.png" id="2_lplbw"]
+[ext_resource type="Texture2D" uid="uid://cjek6ugp3hhhj" path="res://assets/art/ScrapCounterBackground.png" id="2_qn6do"]
+[ext_resource type="Texture2D" uid="uid://b5gqua0y0f8h8" path="res://assets/art/ScarpIcon.png" id="3_7rv3m"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_umctx")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://b8mpxfgf0cuj8"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_6bp4r"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_6bp4r"]
 [ext_resource type="Texture2D" uid="uid://bfs3y0yb74f7j" path="res://assets/art/player/run-1.png" id="2_rxvsp"]
 [ext_resource type="Texture2D" uid="uid://banjjfiiqq47p" path="res://assets/art/player/run-2.png" id="3_b5686"]
 [ext_resource type="Texture2D" uid="uid://da6lxv3tnome8" path="res://assets/art/player/run-3.png" id="4_wpn68"]
@@ -52,6 +52,7 @@ z_as_relative = false
 script = ExtResource("1_6bp4r")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(0, -34)
 sprite_frames = SubResource("SpriteFrames_dn80l")

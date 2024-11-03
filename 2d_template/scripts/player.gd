@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $Sprite
 
 @export var speed: float = 200.0  # Movement speed of the character
+
+const GRAVITY = 200.0
 
 var controller_id
 
@@ -14,7 +16,7 @@ var controller_ready := false
 
 @export var cur_dir: Vector2 = Vector2.LEFT
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Vector2.ZERO
 	# Get input direction
 	if controller_ready == true:
@@ -22,9 +24,9 @@ func _physics_process(_delta: float) -> void:
 	# Update last known facing, used for hook
 	if direction != Vector2.ZERO:
 		cur_dir = direction
-		rotation = (cur_dir.angle() + PI/2) - get_parent().rotation
 
-	velocity = direction * speed
+	#velocity.x = direction * speed
+	velocity.y += delta * GRAVITY
 
 	# Move the character
 	move_and_slide()

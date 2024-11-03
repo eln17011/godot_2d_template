@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://rslh7wyupis3"]
 
-[ext_resource type="Script" path="res://Scripts/game.gd" id="1_ol0k5"]
-[ext_resource type="PackedScene" uid="uid://bn6hyjabd7tel" path="res://UI/hud.tscn" id="2_q2g3m"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_ol0k5"]
+[ext_resource type="PackedScene" uid="uid://bn6hyjabd7tel" path="res://ui/hud.tscn" id="2_q2g3m"]
 [ext_resource type="PackedScene" uid="uid://c54u4diypovu6" path="res://scenes/rain.tscn" id="3_7gdvo"]
 [ext_resource type="PackedScene" uid="uid://blgtkl7wgb4pu" path="res://scenes/lightning_strike.tscn" id="4_ijymm"]
 [ext_resource type="PackedScene" uid="uid://bu2gy203g5cmo" path="res://scenes/world.tscn" id="5_spkjw"]
